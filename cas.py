@@ -19,6 +19,7 @@ class cas2(unittest.TestCase):
         wd.find_element_by_css_selector("a.header-bar__logo-img").click()
 
     def login(self, wd, credentials):
+        self.open_home_page(wd)
         wd.find_element_by_css_selector("input.form-control").click()
         wd.find_element_by_css_selector("input.form-control").clear()
         wd.find_element_by_css_selector("input.form-control").send_keys(credentials.login)
@@ -34,7 +35,6 @@ class cas2(unittest.TestCase):
     def test_cas2(self):
         success = True
         wd = self.wd
-        self.open_home_page(wd)
         self.login(wd, Credentials(login="380961451058", password="MK2prod_2016"))
         self.hello_mk(wd)
         self.assertTrue(success)
