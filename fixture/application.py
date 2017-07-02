@@ -1,5 +1,6 @@
 from selenium.webdriver.chrome.webdriver import WebDriver
 from fixture.session import SessionHelper
+from fixture.mk import MkHelper
 
 class Application:
 
@@ -7,10 +8,8 @@ class Application:
         self.wd = WebDriver()
         self.wd.implicitly_wait(60)
         self.session = SessionHelper(self)
+        self.mk = MkHelper(self)
 
-    def hello_mk(self):
-        wd = self.wd
-        wd.find_element_by_css_selector("a.header-bar__logo-img").click()
 
     def open_home_page(self):
         wd = self.wd

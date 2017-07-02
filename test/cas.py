@@ -14,6 +14,6 @@ def app(request):
 
 def test_cas2(app):
     app.session.login(Credentials(login="380961451058", password="MK2prod_2016"))
-    app.hello_mk()
+    app.mk.hello_mk()
     app.session.logout()
 
