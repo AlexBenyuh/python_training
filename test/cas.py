@@ -13,7 +13,7 @@ def app(request):
     return fixture
 
 def test_cas2(app):
-    app.login(Credentials(login="380961451058", password="MK2prod_2016"))
+    app.session.login(Credentials(login="380961451058", password="MK2prod_2016"))
     app.hello_mk()
-    app.logout()
+    app.session.logout()
 
