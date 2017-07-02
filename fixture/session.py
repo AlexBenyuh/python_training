@@ -7,7 +7,7 @@ class SessionHelper:
 
     def login(self, credentials):
         wd = self.app.wd
-        self.app.open_home_page()
+        # self.app.open_home_page()
         wd.find_element_by_css_selector("input.form-control").click()
         wd.find_element_by_css_selector("input.form-control").clear()
         wd.find_element_by_css_selector("input.form-control").send_keys(credentials.login)
