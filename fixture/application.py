@@ -15,6 +15,7 @@ class Application:
     def open_home_page(self):
         wd = self.wd
         wd.get("https://new.kyivstar.ua/ecare/")
+        wd.maximize_window()
 
     def destroy(self):
         self.wd.quit()
