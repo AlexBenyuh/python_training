@@ -17,6 +17,6 @@ class SessionHelper:
         wd.find_element_by_xpath("//section[@id='section-left']/section[2]/div/div[1]").click()
         wd.find_element_by_css_selector("button.btn.btn-default").click()
 
-    def logout(self) -> object:
+    def logout(self):
         wd = self.app.wd
         wd.find_element_by_xpath("html/body/div[4]/div[2]/div[3]/div/div[2]/div/a[2]").click()
